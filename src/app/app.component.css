@@ -1,0 +1,21 @@
+.dLogo img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.fa.fa-caret-right {
+  padding-left: 30px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+  
+ }
+ 
+

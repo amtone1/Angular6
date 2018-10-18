@@ -1,20 +1,177 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
+    <div class="container">
+        <div class="jumbotron">
+          <h1>Angular 6, Bootstrap, jQuery examples. </h1> 
+          <p>This is just some sample information and Angular 6 functionality.</p> 
+        </div>
+            </div>
   <h1>
-    Welcome to {{ title }}!
+    Welcome to the {{ title }}!
   </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <hr />
+  
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <h1>Exampe of One-Way Data Binding.</h1>
+  <div classs="owdb">
+    <h3>The data below is bond in one direction.</h3>
+    {{oneWayData}}
 
+
+  </div>
+  <hr />
+  <div class="twdb">
+    <h3>The data below is bond in both directions.</h3>
+    {{twoWayData}}
+
+
+    <h1>Exampe of Two-Way Data Binding.</h1>
+    <input type="text" [(ngModel)]="bindType"> {{bindType}}
+
+    <br />
+    <h5>(Type in the box above to witness Two-Way data Binding.)</h5>
+  </div>
+  <hr />
+  <h1>Building Blocks to modern Angular development</h1>
+  <div class="" bBlocks>
+    <ul>
+      <li>Modules</li>
+      <ul>
+        <li>
+          Perform types of tasks and exports values like a class
+        </li>
+      </ul>
+      <li>Libraries</li>
+      <ul>
+        <li>
+          They have the @angular prefix.
+        </li>
+      </ul>
+      <li>Components</li>
+      <ul>
+        <li>
+          They are basiclly Angular classes
+        </li>
+      </ul>
+      <li>Templates</li>
+      <ul>
+        <li>
+          The HTML view
+        </li>
+      </ul>
+      <li>Data Binding</li>
+      <ul>
+        <li>
+          Both one way and two way data binding
+        </li>
+      </ul>
+      <li>DirectiveS</li>
+      <ul>
+        <li>
+          For DOM manipulation
+        </li>
+      </ul>
+      <li>Services</li>
+      <ul>
+        <li>
+          Classes with functions
+        </li>
+      </ul>
+      <li>Dependency Injections</li>
+      <ul>
+        <li>
+          Constructors that request services.
+        </li>
+      </ul>
+    </ul>
+  </div>
+  <hr />
+  <h1>Life Cycle Hooks</h1>
+  <ul>
+    <li>ngOnChanges()</li>
+    <ul>
+      <li>This hook is Called before ngOnInit() and whenever one or more data-bound input properties change.()</li>
+    </ul>
+    <li>ngOnInit()</li>
+    <ul>
+      <li>This hook is only called once after the first ngOnChanges. it sets the components or directives input properties</li>
+    </ul>
+    <li>ngOnDestroy()()</li>
+    <ul>
+      <li>Detaches Observables and event handlers. This hook is called before Angular does its on destroy</li>
+    </ul>
+  </ul>
+  <hr />
+  <h1>Multi-Level Dropdown </h1>
+  <div class="mldd">
+    <div class="container">
+      <div class="row">
+        <hr>
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Dropdown
+          </button>
+          <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" tabindex="-1" href="#">Section 1</a>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" tabindex="-1" href="#">Section 2</a>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" tabindex="-1" href="#">Section 3</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                  <a tabindex="-1" href="#">Sub Section 1</a>
+                </li>
+                <li class="dropdown-item">
+                  <a tabindex="-1" href="#">Sub Section 2</a>
+                </li>
+                <li class="dropdown-submenu">
+                  <a class="dropdown-item" href="#">Sub Section 3</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                      <a href="#">Action 1</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a href="#">Action 2</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a href="#">Action 3</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a href="#">Action 4</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a href="#">Action 4</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Sub Section 4</a>
+                </li>
+                <li class="dropdown-item">
+                  <a href="#">Sub Section 5</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" tabindex="-1" href="#">Section 4</a>
+            </li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" tabindex="-1" href="#">Section 5</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <h1>Products Table</h1>
+  <app-product-details></app-product-details>
+  <div class="footer">
+    Dell Test Completion. Anthony McDonald 2018
+  </div>
+</div>
